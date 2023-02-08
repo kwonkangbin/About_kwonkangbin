@@ -7,3 +7,5 @@ function App() {
 }
 
 export default App;
+
+//git config --global core.autocrlf true
