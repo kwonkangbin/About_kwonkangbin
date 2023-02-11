@@ -1,8 +1,9 @@
+import './App.css'
 function App() {
   return (  
-    <>
-      <h1>권강빈</h1>
-    </>
+    <div id='body'>
+      <h1 id="about_me">권강빈을 소개합니다.</h1>
+    </div>
   );
 }
 
