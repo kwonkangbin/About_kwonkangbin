@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 
-export function Header() {
-    return (  
-        <S.Styledheader>
-            <Link>권강빈</Link>
-        </S.Styledheader>
+export default function Header() {
+    const [ref, inView] = useInView({ initialInView: true });
+    return ( 
+        <>
+            <div ref={ref} />
+            <S.Styledheader className={!inView ? "scrolled" : ""}>
+                <S.StyledLink to='/'>kangbin</S.StyledLink>
+                <S.StyledA href="https://github.com/kwonkangbin">github</S.StyledA>
+                <S.StyledA href="">BROG</S.StyledA>
+            </S.Styledheader>
+        </> 
     );
 }
