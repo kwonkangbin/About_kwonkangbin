@@ -16,7 +16,10 @@ export default function App() {
 }
 
 const Layout = styled.div`
+  //position: relative;
+  max-width: 900px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 0 auto;
 `;

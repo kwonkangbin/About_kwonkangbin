@@ -9,8 +9,8 @@ export default function Header() {
             {/* <S.dif ref={ref} /> */}
             <S.Styledheader>
                 <S.StyledLink to='/'>kangbin</S.StyledLink>
-                {/* <S.StyledA href="https://github.com/kwonkangbin">github</S.StyledA>
-                <S.StyledA href="">BROG</S.StyledA> */}
+                <S.StyledA href="https://github.com/kwonkangbin">github</S.StyledA>
+                <S.StyledA href="">BROG</S.StyledA>
             </S.Styledheader>
         </> 
     );
