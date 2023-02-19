@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from './style.js';
 
-export function Footer() {
+export default function Footer() {
     return (
         <S.Stylefooter>
             

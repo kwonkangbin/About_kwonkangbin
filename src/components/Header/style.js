@@ -9,11 +9,10 @@ export const Styledheader = styled.header`
     align-items: center;
     height: 70px;
     width: 100%;
-    max-width: 900px;
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(8px);
-    transition: background-color 0.2s, box-shadow 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s; */
 
 
     &.scrolled {
@@ -27,6 +26,7 @@ export const StyledLink = styled(Link)`
     color: black;
     font-size: 30px;
     font-weight: 600;
+    margin-left: 10vw;
 `;
 
 export const StyledA = styled.a`
