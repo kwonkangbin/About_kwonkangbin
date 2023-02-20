@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Styledheader = styled.header`
     position: fixed;
-    top: 10px;
     z-index: 99999999;
     max-width: 900px;
     width: 100%;
@@ -48,7 +47,7 @@ export const StyledA = styled.a`
     font-weight: 500;
 `;
 
-export const dif = styled.div`
-    height: 10px;
-    width: 100%;
-`;
+// export const dif = styled.div`
+//     height: 10px;
+//     width: 100%;
+// `;
