@@ -9,11 +9,11 @@ export const Stylecontent = styled.main`
 
     >h1{
         font-size: 2.6rem;
-        font-weight: bold;
+        font-weight: bolder;
         text-align: start;
         line-height: 140%;
         width: 100%;
-        margin: 2em 0 2em;
+        margin: 100px 0 80px;
 
         @media screen and (max-width: 450px) {
             margin-left: 10px;
