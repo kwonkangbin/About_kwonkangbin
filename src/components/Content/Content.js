@@ -1,4 +1,5 @@
 import React from "react";
+import Education from "./Education.js";
 import * as S from './style.js';
 
 export default function Content() {
@@ -11,6 +12,7 @@ export default function Content() {
                 <br></br>
                 권강빈입니다.
             </h1>
+            <Education />
         </S.Stylecontent>
     );
 }
