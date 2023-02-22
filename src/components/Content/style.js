@@ -15,7 +15,7 @@ export const Stylecontent = styled.main`
         width: 100%;
         margin: 100px 0 80px;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 850px) {
             margin-left: 10px;
         }
     }
