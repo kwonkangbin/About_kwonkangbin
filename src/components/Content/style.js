@@ -7,8 +7,8 @@ export const Stylecontent = styled.main`
     flex-direction: column;
     width: 100%;
 
-    >h1{
-        font-size: 2.6rem;
+    /* >h1{
+        font-size: 2.4rem;
         font-weight: bolder;
         text-align: start;
         line-height: 140%;
@@ -18,5 +18,8 @@ export const Stylecontent = styled.main`
         @media screen and (max-width: 850px) {
             margin-left: 10px;
         }
-    }
+        @media screen and (max-width: 400px;){
+            font-size: 2rem;
+        }
+    } */
 `;
