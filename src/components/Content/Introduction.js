@@ -47,12 +47,12 @@ const Intro = styled.section`
 
     > ul {
         list-style: square;
-        margin-right: 20px;
-        padding-left: 10px;
+        margin-right: 15px;
+        padding-left: 30px;
         > li{
-            font-size: 1.06rem;
+            font-size: 1.08rem;
             margin-bottom: 10px;
-            line-height: 19px;
+            line-height: 20px;
         }
     }
 `;
