@@ -14,12 +14,13 @@ export default function LinkButton({
           </Container>
         );
     }
-    
-    return (
+    else{
+      return (
         <Container className={className} to={to}>
           {children}
         </Container>
-    );
+      );
+    }
 }
 
 const Container = styled(Link)`
