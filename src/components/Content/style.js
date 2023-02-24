@@ -23,3 +23,21 @@ export const Stylecontent = styled.main`
         }
     } */
 `;
+
+export const FadeIn = styled.section`
+    > h2{
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 35px 0 0 10px;
+    }
+    > h3{
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 20px 0 0 20px;
+    }
+    > p{
+        font-size: 1rem;
+        margin: 10px 0 0 20px;
+        color: gray;
+    }
+`;
