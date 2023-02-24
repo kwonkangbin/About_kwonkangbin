@@ -33,7 +33,7 @@ const Container = styled(Link)`
   color: black;
   text-decoration: none;
   transition: background-color 0.2s;
-  margin: 15px 0 0 20px;
+  margin: 15px 0 0 25px;
 
   &:hover {
     background-color: rgba(85, 87, 110, 0.32);

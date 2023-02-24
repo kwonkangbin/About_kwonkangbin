@@ -3,6 +3,7 @@ import Education from "./Education.js";
 import Introduction from "./Introduction.js";
 import Awards from "./Awards.js";
 import Experiences from "./Experiences.js";
+import Project from "./Project.js";
 import * as S from './style.js';
 
 export default function Content() {
@@ -11,6 +12,7 @@ export default function Content() {
             <Introduction />
             <Experiences />
             <Awards />
+            <Project />
             <Education />
         </S.Stylecontent>
     );

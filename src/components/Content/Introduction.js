@@ -48,7 +48,7 @@ const Intro = styled.section`
     > ul {
         list-style: square;
         margin-right: 15px;
-        padding-left: 30px;
+        padding-left: 32px;
         > li{
             font-size: 1.08rem;
             margin-bottom: 10px;
