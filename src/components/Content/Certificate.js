@@ -8,9 +8,9 @@ export default function Certificate(){
         <S.FadeIn>
             <h2>자격증</h2>
             <h3>SQLD(국가공인자격증)</h3>
-            <LinkButton to="http://localhost:3000/image/SQLD.png">자세히</LinkButton>
+            <LinkButton to="Certificate/SQLD">자세히</LinkButton>
             <h3>AZ-900(마이크로소트트)</h3>
-            <LinkButton to="/image/AZ-900.png">자세히</LinkButton>
+            <LinkButton to="Certificate/AZ-900">자세히</LinkButton>
         </S.FadeIn>
     );
 }

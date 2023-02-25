@@ -9,7 +9,7 @@ export default function Experiences(){
             <h2>귀중한 경험</h2>
             <h3>PNU SW·CAMP 2022</h3>
             <p>부산대학교 주최 - 파이썬데이터분석(고급)</p>
-            <LinkButton to="/">자세히</LinkButton>
+            <LinkButton to="/Experiences/PNU">자세히</LinkButton>
             <h3>파이낸셜모델링 웨비나</h3>
             <p>비즈니스캔버스 주최</p>
             <LinkButton to="/">자세히</LinkButton>

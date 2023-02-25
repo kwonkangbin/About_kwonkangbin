@@ -6,9 +6,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-       { path: "/image/AZ-900.png", element: <Deed />},
-    ],
+    // children: [
+    //    { path: "image/AZ-900", element: <Deed />},
+    // ],
+  },
+  { 
+    path: "/Certificate/AZ-900", 
+    element: <Deed props="AZ"/>,
+  },
+  { 
+    path: "/Certificate/SQLD", 
+    element: <Deed props="SQLD"/>,
+  },
+  { 
+    path: "/Experiences/PNU", 
+    element: <Deed props="PNU"/>,
   },
 ]);
 
