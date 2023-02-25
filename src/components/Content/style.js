@@ -28,11 +28,12 @@ export const FadeIn = styled.section`
     > h2{
         font-size: 1.2rem;
         font-weight: bold;
-        margin: 45px 0 0 10px;
+        margin: 45px 0 0 16px;
     }
     > h3{
         font-size: 1.6rem;
         font-weight: 600;
+        line-height: 130%;
         margin: 27px 15px 0 25px;
     }
     > p{

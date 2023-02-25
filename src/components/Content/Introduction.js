@@ -15,7 +15,7 @@ export default function Introduction(){
             <h1>
                 안녕하세요
                 <br></br>
-                다양한 경험을 하는
+                매일 성장해가는
                 <br></br>
                 권강빈입니다.
             </h1>
@@ -35,11 +35,8 @@ const Intro = styled.section`
         text-align: start;
         line-height: 140%;
         width: auto;
-        margin: 100px 0 60px;
+        margin: 80px 0 60px 16px;
 
-        @media screen and (max-width: 850px) {
-            margin-left: 10px;
-        }
         @media screen and (max-width: 400px){
             font-size: 2rem;
         }
@@ -48,11 +45,14 @@ const Intro = styled.section`
     > ul {
         list-style: square;
         margin-right: 15px;
-        padding-left: 32px;
+        padding-left: 35px;
         > li{
             font-size: 1.08rem;
             margin-bottom: 10px;
             line-height: 20px;
+        }
+        li::marker{
+            color: rgb(45, 45, 45, 1);
         }
     }
 `;
