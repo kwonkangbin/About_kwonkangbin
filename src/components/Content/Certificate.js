@@ -10,7 +10,7 @@ export default function Certificate(){
             <h3>SQLD(국가공인자격증)</h3>
             <LinkButton to="Certificate/SQLD">자세히</LinkButton>
             <h3>AZ-900(마이크로소트트)</h3>
-            <LinkButton to="Certificate/AZ-900">자세히</LinkButton>
+            <LinkButton to="ViewDetail/AZ-900">자세히</LinkButton>
         </S.FadeIn>
     );
 }

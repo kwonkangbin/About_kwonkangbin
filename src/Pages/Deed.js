@@ -1,28 +1,54 @@
 import React from "react";
 import styled from "styled-components";
-import AZ from '../image/AZ-900.png';
-import SQLD from '../image/SQLD.png';
+import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
 
-export default function Deed({props}){
-    if(props == "AZ"){
-        return(
-            <Imgs>
-                <img src={AZ}></img>
-            </Imgs>
-        );
-    }
-    else if(props == "SQLD"){
-        return(
-            <>
-                <img src={SQLD}></img>
-            </>
-        );
-    }
+import catchFashion from "./catch-fashion.md";
+
+const data = [
+    {  
+      Title: "AZ-900",
+      Details: catchFashion,
+    },
+  ];
+
+export default function Deed(){
+    const { Id } = useParams();
+    const { Title, Details } = ;
+    return (
+        <Container>
+            <p className="title">{Title}</p>
+            <Markdown>{Details}</Markdown>
+        </Container>
+    );
 }   
 
-const Imgs = styled.div`
-    > img{
-        width: 100vw;
-        height: 900px;
+const Container = styled.main`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > .title {
+    margin: 1.5rem 0 2.5rem;
+  }
+`;
+
+const Markdown = styled(ReactMarkdown)`
+  a {
+    color: black;
+    font-weight: 500;
+    transition: color 0.1s;
+
+    &:hover {
+      color: grey;
     }
+  }
+
+  ul {
+    margin: 0.8rem 0;
+
+    > li {
+      margin: 0.4rem 0;
+    }
+  }
 `;
