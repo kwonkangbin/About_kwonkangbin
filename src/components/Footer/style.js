@@ -2,9 +2,30 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 export const Stylefooter = styled.footer`
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
     width: 100%;
-    height: 120px;
-    background-color: grey;
-    border-top-right-radius: 40px;
+    height: 180px;
+    /* border-top-right-radius: 40px; */
+
+    > div{
+        > img{
+            float:left;
+            margin: 30px 0 0 25px;
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    > a{
+        margin: 12px 0 0 25px;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        color: grey;
+    }
 `;
