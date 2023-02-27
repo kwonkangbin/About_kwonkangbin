@@ -32,22 +32,25 @@ export default function Introduction(){
 
 const Intro = styled.section`
     h1{
-        font-size: 2.4rem;
+        font-size: 3.8rem;
         font-weight: bolder;
         text-align: start;
         line-height: 140%;
         width: auto;
-        margin: 80px 0 60px 16px;
-        transition: opacity 0.5s;
-        opacity: 0;
-
+        margin: 2em 0 2em 16px;
         @media screen and (max-width: 400px){
             font-size: 2rem;
-        }   
+        }
+
     }
-    h1.viewed {
-        visibility: visible;
-        opacity: 1;
+    h1:nth-child(1){
+        margin-top: 2em;
+    }
+    h1:nth-child(2){
+
+    }
+    h1:nth-child(3){
+        
     }
 
     > ul {

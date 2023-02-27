@@ -25,13 +25,13 @@ export const Stylecontent = styled.main`
 `;
 
 export const FadeIn = styled.section`
-    opacity: 0;
+    /* opacity: 0;
     transition: opacity 0.5s;
 
     &.viewed {
         visibility: visible;
         opacity: 1;
-    }
+    } */
     > h2{
         font-size: 1.2rem;
         font-weight: bold;

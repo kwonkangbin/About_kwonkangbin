@@ -10,7 +10,7 @@ export default function Header() {
             <S.Styledheader className={!inView ? "scrolled" : ""}>
                 <S.StyledLink to='/'>kangbin</S.StyledLink>
                 <S.StyledA href="https://github.com/kwonkangbin" target="_blank">github</S.StyledA>
-                <S.StyledA href="" target="_blank">blog</S.StyledA>
+                <S.StyledA href="https://velog.io/@kbk282655" target="_blank">blog</S.StyledA>
             </S.Styledheader>
         </> 
     );
