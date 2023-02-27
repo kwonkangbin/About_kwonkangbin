@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
 const data = [
@@ -10,9 +11,10 @@ const data = [
 ];
 
 export default function Introduction(){
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return(
-        <Intro>
-            <h1>
+        <Intro ref={ref}>
+            <h1 className={inView ? "viewed" : ""}>
                 안녕하세요
                 <br></br>
                 매일 성장해가는
@@ -21,7 +23,7 @@ export default function Introduction(){
             </h1>
             <ul>
                 {data.map((sentence,index)=>(
-                    <li key={index}>{sentence}</li>
+                    <li key={index} className={inView ? "viewed" : ""}>{sentence}</li>
                 ))}
             </ul>
         </Intro>
@@ -36,10 +38,16 @@ const Intro = styled.section`
         line-height: 140%;
         width: auto;
         margin: 80px 0 60px 16px;
+        transition: opacity 0.5s;
+        opacity: 0;
 
         @media screen and (max-width: 400px){
             font-size: 2rem;
-        }
+        }   
+    }
+    h1.viewed {
+        visibility: visible;
+        opacity: 1;
     }
 
     > ul {
@@ -50,9 +58,30 @@ const Intro = styled.section`
             font-size: 1.08rem;
             margin-bottom: 10px;
             line-height: 20px;
+            opacity: 0;
+        }
+        li.viewed {
+            visibility: visible;
+            opacity: 1;
+        }
+        li:nth-child(1){
+            transition: opacity 0.75s;
+        }
+        li:nth-child(2){
+            transition: opacity 1s;
+        }
+        li:nth-child(3){
+            transition: opacity 1.25s;
+        }
+        li:nth-child(4){
+            transition: opacity 1.5s;
+        }
+        li:nth-child(5){
+            transition: opacity 1.75s;
         }
         li::marker{
             color: rgb(45, 45, 45, 1);
         }
+
     }
 `;

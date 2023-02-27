@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import LinkButton from "./LinkButton";
+import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 
 export default function Project(){
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return (
-        <S.FadeIn>
+        <S.FadeIn ref={ref} className={inView ? "viewed" : ""}>
             <h2>프로젝트</h2>
             <h3>Ressum</h3>
             <p>간단 소개 : 자녀 맞춤형 독서 교육 서비스</p>

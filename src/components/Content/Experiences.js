@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import LinkButton from "./LinkButton";
+import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 
 export default function Experiences(){
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return (
-        <S.FadeIn>
+        <S.FadeIn ref={ref} className={inView ? "viewed" : ""}>
             <h2>귀중한 경험</h2>
             <h3>PNU SW·CAMP 2022</h3>
             <p>부산대학교 주최 - 파이썬데이터분석(고급)</p>

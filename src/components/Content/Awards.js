@@ -1,12 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 import LinkButton from "./LinkButton";
+import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 
 export default function Awards(){
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return(
-        <S.FadeIn>
-            <h2>수상 경력</h2>
+        <S.FadeIn ref={ref} className={inView ? "viewed" : ""}>
+            <h2 >수상 경력</h2>
             <h3>실전 창업 챌린지</h3>
             <p>2022년 - 교육부장관상</p>
             <h3>삼성주니어SW창작대회</h3>

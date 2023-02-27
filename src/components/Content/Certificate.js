@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import LinkButton from "./LinkButton";
+import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 
 export default function Certificate(){
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return (
-        <S.FadeIn>
+        <S.FadeIn ref={ref} className={inView ? "viewed" : ""}>
             <h2>자격증</h2>
             <h3>SQLD(국가공인자격증)</h3>
             <LinkButton to="Certificate/SQLD">자세히</LinkButton>

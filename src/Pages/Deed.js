@@ -1,27 +1,35 @@
 import React from "react";
-import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
-import catchFashion from "./catch-fashion.md";
+import catchFashion from "../assets/AZ.md";
 
 const data = [
-    {  
-      Title: "AZ-900",
-      Details: catchFashion,
-    },
-  ];
+  {
+    id: "AZ-900",
+    title: "스마일벤처스 커리어 상세 페이지 입니다.",
+    detail: catchFashion,
+  },
+];
 
-export default function Deed(){
-    const { Id } = useParams();
-    const { Title, Details } = ;
-    return (
-        <Container>
-            <p className="title">{Title}</p>
-            <Markdown>{Details}</Markdown>
-        </Container>
-    );
-}   
+const detailMap = new Map(
+  data.map(({ id, title, detail }) => [id, { title, detail }])
+);
+
+
+export default function Deed() {
+  const { id } = useParams();
+  const { title, detail } = React.useMemo(() => detailMap.get(id), [id]);
+  return (
+    <Container>
+      <p className="title">{title}</p>
+      <Markdown>
+        {detail}
+      </Markdown>
+    </Container>
+  );
+}
 
 const Container = styled.main`
   width: 100%;
@@ -40,7 +48,7 @@ const Markdown = styled(ReactMarkdown)`
     transition: color 0.1s;
 
     &:hover {
-      color: grey;
+      color: gray;
     }
   }
 
