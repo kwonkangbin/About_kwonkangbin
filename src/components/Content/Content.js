@@ -10,7 +10,7 @@ import * as S from './style.js';
 export default function Content() {
     return (
         <S.Stylecontent>
-            <Introduction />
+            <Introduction/>
             <Experiences />
             <Awards />
             <Project />

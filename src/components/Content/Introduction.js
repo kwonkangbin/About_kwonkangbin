@@ -1,7 +1,5 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import typingEffect from "typing-effect";
 
 const data = [
     "사용자 경험을 개선하기 위해 노력합니다",
@@ -12,15 +10,14 @@ const data = [
 ];
 
 export default function Introduction(){
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return(
-        <Intro ref={ref}>
+        <Intro>
             <h1>안녕하세요</h1>
             <h1>매일 성장해가는</h1>
             <h1>권강빈입니다.</h1>
             <ul>
                 {data.map((sentence,index)=>(
-                    <li key={index} className={inView ? "viewed" : ""}>{sentence}</li>
+                    <li key={index}>{sentence}</li>
                 ))}
             </ul>
         </Intro>
@@ -47,7 +44,18 @@ const Intro = styled.section`
         margin-top: 2em;
         animation: name duration timing-function delay iteration-count direction fill-mode;
         border-right: 3px solid black;
-        animation: blink .5s infinite, typing1 .5s steps(5) 1s;
+        animation: blink .5s infinite, typing1 .5s steps(5) .5s;
+        animation-fill-mode: forwards;
+    }
+
+    h1:nth-child(2){
+        animation: blink .5s infinite 3.5s, typing2 .5s steps(8) 1s;
+        animation-fill-mode: forwards;
+    }
+
+    h1:nth-child(3){
+        margin-bottom: 2em;
+        animation: blink .5s infinite, typing3 .5s steps(7) 1.5s;
         animation-fill-mode: forwards;
     }
 
@@ -114,16 +122,6 @@ const Intro = styled.section`
         }
     }
 
-    h1:nth-child(2){
-        animation: blink .5s infinite 3.5s, typing2 .5s steps(8) 1.5s;
-        animation-fill-mode: forwards;
-    }
-
-    h1:nth-child(3){
-        margin-bottom: 2em;
-        animation: blink .5s infinite, typing3 .5s steps(7) 2s;
-        animation-fill-mode: forwards;
-    }
     @keyframes blink {
         50%{
             border-color: transparent;
@@ -140,32 +138,33 @@ const Intro = styled.section`
             line-height: 20px;
             opacity: 0;
         }
-        li.viewed {
-            visibility: visible;
-            opacity: 1;
-        }
         li:nth-child(1){
-            transition: opacity 0.75s;
-            transition-delay: 2.16s;
+            animation: opacities 1s 2.1s 1 ease forwards;
         }
         li:nth-child(2){
-            transition: opacity 1s;
-            transition-delay: 2.16s;
+            animation: opacities 1s 2.3s 1 ease forwards;
         }
         li:nth-child(3){
-            transition: opacity 1.25s;
-            transition-delay: 2.16s;
+            animation: opacities 1s 2.5s 1 ease forwards;
         }
         li:nth-child(4){
-            transition: opacity 1.5s;
-            transition-delay: 2.16s;
+            animation: opacities 1s 2.7s 1 ease forwards;
         }
         li:nth-child(5){
-            transition: opacity 1.75s;
-            transition-delay: 2.16s;
+            animation: opacities 1s 2.9s 1 ease forwards;
         }
         li::marker{
             color: rgb(45, 45, 45, 1);
+        }
+
+        @keyframes opacities {
+            from{
+                opacity: 0;
+            }
+            to{
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 `;
