@@ -3,13 +3,17 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import catchFashion from "../assets/AZ.md";
+import AZ900 from "../assets/AZ-900.md";
+import SQLD from "../assets/SQLD.md";
 
 const data = [
   {
     id: "AZ-900",
-    title: "스마일벤처스 커리어 상세 페이지 입니다.",
-    detail: catchFashion,
+    detail: AZ900,
+  },
+  {
+    id: "SQLD",
+    detail: SQLD,
   },
 ];
 
@@ -23,7 +27,7 @@ export default function Deed() {
   const { title, detail } = React.useMemo(() => detailMap.get(id), [id]);
   return (
     <Container>
-      <p className="title">{title}</p>
+      <p className="title">{id}관련 페이지입니다.</p>
       <Markdown>
         {detail}
       </Markdown>
