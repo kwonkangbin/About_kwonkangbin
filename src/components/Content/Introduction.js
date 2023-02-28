@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
+import typingEffect from "typing-effect";
 
 const data = [
     "사용자 경험을 개선하기 위해 노력합니다",
@@ -14,13 +15,9 @@ export default function Introduction(){
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
     return(
         <Intro ref={ref}>
-            <h1 className={inView ? "viewed" : ""}>
-                안녕하세요
-                <br></br>
-                매일 성장해가는
-                <br></br>
-                권강빈입니다.
-            </h1>
+            <h1>안녕하세요</h1>
+            <h1>매일 성장해가는</h1>
+            <h1>권강빈입니다.</h1>
             <ul>
                 {data.map((sentence,index)=>(
                     <li key={index} className={inView ? "viewed" : ""}>{sentence}</li>
@@ -36,21 +33,101 @@ const Intro = styled.section`
         font-weight: bolder;
         text-align: start;
         line-height: 140%;
-        width: auto;
-        margin: 2em 0 2em 16px;
+        width: 0;
+        margin-left: 16px;      
+        white-space: nowrap;
+        overflow: hidden;
+        
         @media screen and (max-width: 400px){
             font-size: 2rem;
         }
-
     }
+
     h1:nth-child(1){
         margin-top: 2em;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+        border-right: 3px solid black;
+        animation: blink .5s infinite, typing1 .5s steps(5) 1s;
+        animation-fill-mode: forwards;
     }
-    h1:nth-child(2){
 
+    @media screen and (max-width: 400px){
+        @keyframes typing1 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 140px;
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typing2 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 203px;
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typing3 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 177px;
+                border-color: transparent;
+            }
+        }
     }
+    @media screen and (min-width: 401px){
+        @keyframes typing1 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 265px;
+                border-color: transparent;
+            }
+        }   
+
+        @keyframes typing2 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 381px;
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typing3 {
+            from{
+                width: 0;
+            }
+            to{
+                width: 332px;
+                border-color: transparent;
+            }
+        }
+    }
+
+    h1:nth-child(2){
+        animation: blink .5s infinite 3.5s, typing2 .5s steps(8) 1.5s;
+        animation-fill-mode: forwards;
+    }
+
     h1:nth-child(3){
-        
+        margin-bottom: 2em;
+        animation: blink .5s infinite, typing3 .5s steps(7) 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes blink {
+        50%{
+            border-color: transparent;
+        }
     }
 
     > ul {
@@ -69,22 +146,26 @@ const Intro = styled.section`
         }
         li:nth-child(1){
             transition: opacity 0.75s;
+            transition-delay: 2.16s;
         }
         li:nth-child(2){
             transition: opacity 1s;
+            transition-delay: 2.16s;
         }
         li:nth-child(3){
             transition: opacity 1.25s;
+            transition-delay: 2.16s;
         }
         li:nth-child(4){
             transition: opacity 1.5s;
+            transition-delay: 2.16s;
         }
         li:nth-child(5){
             transition: opacity 1.75s;
+            transition-delay: 2.16s;
         }
         li::marker{
             color: rgb(45, 45, 45, 1);
         }
-
     }
 `;
