@@ -10,11 +10,13 @@ export const Stylefooter = styled.footer`
     /* border-top-right-radius: 40px; */
 
     > div{
-        > img{
+        > a{
             float:left;
             margin: 30px 0 0 25px;
-            width: 28px;
-            height: 28px;
+            > img{
+                width: 28px;
+                height: 28px;
+            }
         }
     }
 
