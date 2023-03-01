@@ -49,7 +49,7 @@ const Intro = styled.section`
     }
 
     h1:nth-child(2){
-        animation: blink .5s infinite 3.5s, typing2 .5s steps(8) 1s;
+        animation: blink .5s infinite 3.5s, typing2 .5s steps(7) 1s;
         animation-fill-mode: forwards;
     }
 
