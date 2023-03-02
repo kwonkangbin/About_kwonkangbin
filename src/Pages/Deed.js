@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -19,13 +18,13 @@ const data = [
 ];
 
 const detailMap = new Map(
-  data.map(({ id, title, detail }) => [id, { title, detail }])
+  data.map(({ id, detail }) => [id, { detail }])
 );
 
 
 export default function Deed() {
   const { id } = useParams();
-  const { title, detail } = React.useMemo(() => detailMap.get(id), [id]);
+  const { detail } = React.useMemo(() => detailMap.get(id), [id]);
   return (
     <Container>
       <p className="title">{id}관련 페이지입니다.</p>
@@ -64,32 +63,4 @@ const Markdown = styled(ReactMarkdown)`
       margin: 0.4rem 0;
     }
   }
-=======
-import styled from "styled-components";
-import AZ from '../image/AZ-900.png';
-import SQLD from '../image/SQLD.png';
-
-export default function Deed({props}){
-    if(props == "AZ"){
-        return(
-            <Imgs>
-                <img src={AZ}></img>
-            </Imgs>
-        );
-    }
-    else if(props == "SQLD"){
-        return(
-            <>
-                <img src={SQLD}></img>
-            </>
-        );
-    }
-}   
-
-const Imgs = styled.div`
-    > img{
-        width: 100vw;
-        height: 900px;
-    }
->>>>>>> parent of 2bdf07f (어질어질하네)
 `;
