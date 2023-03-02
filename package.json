@@ -1,5 +1,5 @@
 {
-  "name": "my-webpack-project",
+  "name": "about_kwonkangbin",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -152,8 +152,5 @@
       "jest-watch-typeahead/testname"
     ],
     "resetMocks": true
-  },
-  "babel": {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
   }
 }
