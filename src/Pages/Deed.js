@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -24,12 +24,20 @@ const detailMap = new Map(
 
 export default function Deed() {
   const { id } = useParams();
-  const { title, detail } = React.useMemo(() => detailMap.get(id), [id]);
+  const { detail } = React.useMemo(() => detailMap.get(id), [id]);
+
+  const [tosText, setTosText] = useState('')
+
+	// Fetch Terms of Use
+	useEffect(() => {
+		fetch(detail).then(res => res.text()).then(text => setTosText(text))
+	})
+
   return (
     <Container>
       <p className="title">{id}관련 페이지입니다.</p>
       <Markdown>
-        {detail}
+        {tosText}
       </Markdown>
     </Container>
   );
