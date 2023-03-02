@@ -24,7 +24,7 @@ const detailMap = new Map(
 
 export default function Deed() {
   const { id } = useParams();
-  const { detail } = React.useMemo(() => detailMap.get(id), [id]);
+  const { title, detail } = React.useMemo(() => detailMap.get(id), [id]);
   return (
     <Container>
       <p className="title">{id}관련 페이지입니다.</p>

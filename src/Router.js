@@ -8,13 +8,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    // children: [
-    //    { path: "image/AZ-900", element: <Deed />},
-    // ],
   },
   { 
-    path: "/ViewDetail/:id", 
-    element: <Deed/>,
+    path: "ViewDetail/:id",
+    element: <Deed />
   },
 ]);
 

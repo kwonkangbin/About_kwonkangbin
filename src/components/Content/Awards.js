@@ -1,5 +1,4 @@
 import React from "react";
-import LinkButton from "./LinkButton";
 import { useInView } from "react-intersection-observer";
 import * as S from './style.js';
 

@@ -1,5 +1,4 @@
 import React from "react";
-import LinkButton from "../Content/LinkButton";
 import LinkedIn from "../../assets/logo/linkedin.svg"
 import Instagram from "../../assets/logo/instagram.png"
 import * as S from './style.js';
