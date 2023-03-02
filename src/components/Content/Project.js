@@ -1,7 +1,7 @@
 import React from "react";
 import LinkButton from "./LinkButton";
 import { useInView } from "react-intersection-observer";
-import * as S from './style.js';
+import * as S from './Style.js';
 
 export default function Project(){
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });

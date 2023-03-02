@@ -3,8 +3,8 @@ import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import AZ900 from "../assets/AZ-900.md";
-import SQLD from "../assets/SQLD.md";
+import AZ900 from "../Assets/AZ-900.md";
+import SQLD from "../Assets/SQLD.md";
 
 const data = [
   {

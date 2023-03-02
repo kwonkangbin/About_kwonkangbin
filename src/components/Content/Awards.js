@@ -1,6 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import * as S from './style.js';
+import * as S from './Style.js';
 
 export default function Awards(){
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
