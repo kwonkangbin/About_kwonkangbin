@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
 import Content from "./components/Content/Content.js";
+<<<<<<< HEAD
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -55,6 +56,9 @@ const GlobalStyle = createGlobalStyle`
     color: black;
   }
 `;
+=======
+import { Outlet } from 'react-router-dom';
+>>>>>>> parent of 2bdf07f (어질어질하네)
 
 export default function App() {
   return (

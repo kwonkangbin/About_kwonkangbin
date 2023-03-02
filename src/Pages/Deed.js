@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -63,4 +64,32 @@ const Markdown = styled(ReactMarkdown)`
       margin: 0.4rem 0;
     }
   }
+=======
+import styled from "styled-components";
+import AZ from '../image/AZ-900.png';
+import SQLD from '../image/SQLD.png';
+
+export default function Deed({props}){
+    if(props == "AZ"){
+        return(
+            <Imgs>
+                <img src={AZ}></img>
+            </Imgs>
+        );
+    }
+    else if(props == "SQLD"){
+        return(
+            <>
+                <img src={SQLD}></img>
+            </>
+        );
+    }
+}   
+
+const Imgs = styled.div`
+    > img{
+        width: 100vw;
+        height: 900px;
+    }
+>>>>>>> parent of 2bdf07f (어질어질하네)
 `;
