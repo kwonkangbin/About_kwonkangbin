@@ -26,7 +26,7 @@ export default function Deed() {
   const { id } = useParams();
   const { detail } = React.useMemo(() => detailMap.get(id), [id]);
 
-  const [tosText, setTosText] = useState('')
+  const [markdownFile, setTosText] = useState('')
 
 	// Fetch Terms of Use
 	useEffect(() => {
@@ -35,18 +35,19 @@ export default function Deed() {
 
   return (
     <Container>
-      <p className="title">{id}관련 페이지입니다.</p>
       <Markdown>
-        {tosText}
+        {markdownFile}
       </Markdown>
     </Container>
   );
 }
 
 const Container = styled.main`
+  max-width: 900px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 
   > .title {
     margin: 1.5rem 0 2.5rem;
