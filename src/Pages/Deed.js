@@ -46,7 +46,6 @@ const Container = styled.main`
   max-width: 900px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   margin: 0 auto;
 
   > .title {
@@ -55,6 +54,10 @@ const Container = styled.main`
 `;
 
 const Markdown = styled(ReactMarkdown)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
   a {
     color: black;
     font-weight: 500;
