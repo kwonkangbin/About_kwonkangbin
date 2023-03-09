@@ -11,6 +11,7 @@ export default function Footer() {
                 <a href="https://www.instagram.com/vin060331/" target="_blank"><img src={Instagram}></img></a>
             </div>
             <a href="mailto:kbk282655@gmail.com">Email : kbk282655@gmail.com</a>
+            <p>Copyright ⓒ 권강빈 KANGBIN 2022. All Rights Reserved.</p>
         </S.Stylefooter>
     );
 }

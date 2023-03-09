@@ -29,4 +29,15 @@ export const Stylefooter = styled.footer`
         text-decoration: none;
         color: grey;
     }
+
+    > p{
+        margin: 12px 0 0 25px;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        color: grey;
+    }
 `;
