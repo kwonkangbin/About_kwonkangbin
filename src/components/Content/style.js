@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
-
 export const Stylecontent = styled.main`
     display: flex;
     justify-content: center;

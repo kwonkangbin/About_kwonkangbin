@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import AZ900 from "../Assets/AZ-900.md";
 import SQLD from "../Assets/SQLD.md";
+import News from "../Assets/News.md";
 
 const data = [
   {
@@ -14,6 +15,10 @@ const data = [
   {
     id: "SQLD",
     detail: SQLD,
+  },
+  {
+    id: "News",
+    detail: News,
   },
 ];
 
