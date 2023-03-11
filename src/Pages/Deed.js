@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import AZ900 from "../Assets/AZ-900.md";
 import SQLD from "../Assets/SQLD.md";
-import News from "../Assets/News.md";
+import NEWS from "../Assets/News.md";
 
 const data = [
   {
@@ -18,7 +18,7 @@ const data = [
   },
   {
     id: "News",
-    detail: News,
+    detail: NEWS,
   },
 ];
 
@@ -64,6 +64,7 @@ const Markdown = styled(ReactMarkdown)`
   flex-direction: column;
   
   a {
+    text-decoration: none;
     color: black;
     font-weight: 500;
     transition: color 0.1s;

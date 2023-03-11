@@ -14,9 +14,9 @@ export default function Awards(){
             <p>2022년 - 파이널리스트</p>
             <h3>삼성 드림업 창업캠프</h3>
             <p>2022년 - 우수상</p>
-            <LinkButton to="ViewDetail/News">관련 기사</LinkButton>
             <h3>JA-삼성 창업놀이터 페스티벌</h3>
             <p>2022년 - 입선</p>
+            <LinkButton to="ViewDetail/News">내가 나온 기사</LinkButton>
         </S.FadeIn>
     );
 }
