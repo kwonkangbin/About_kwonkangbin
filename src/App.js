@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Components/Header/Header.js";
-import Footer from "./Components/Footer/Footer.js";
-import Content from "./Components/Content/Content.js";
+import Header from "./components/Header/Header.js";
+import Footer from "./components/Footer/Footer.js";
+import Content from "./components/Content/Content.js";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`

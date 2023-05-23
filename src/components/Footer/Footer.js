@@ -1,6 +1,6 @@
 import React from "react";
-import LinkedIn from "../../Assets/logo/linkedin.svg"
-import Instagram from "../../Assets/logo/instagram.png"
+import LinkedIn from "../../assets/logo/linkedin.svg"
+import Instagram from "../../assets/logo/instagram.png"
 import * as S from './style.js';
 
 export default function Footer() {
