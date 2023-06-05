@@ -13,7 +13,7 @@ export default function Awards(){
             <h3>삼성주니어SW창작대회</h3>
             <p>2022년 - 파이널리스트</p>
             <h3>삼성 드림업 창업캠프</h3>
-            <p>2022년 - 우수상</p>
+            <p>2022년 - 우수상(회장상)</p>
             <h3>JA-삼성 창업놀이터 페스티벌</h3>
             <p>2022년 - 입선</p>
             <LinkButton to="ViewDetail/News">내가 나온 기사</LinkButton>

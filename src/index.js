@@ -19,6 +19,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  img{
+    max-width: 800px !important;
+    max-height: 800px !important;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -6,11 +6,16 @@ import styled from "styled-components";
 import AZ900 from "../assets/AZ-900.md";
 import SQLD from "../assets/SQLD.md";
 import NEWS from "../assets/News.md";
+import IndustrialEngineerInformationProcessing from "../assets/Industrial-Engineer-Information-Processing.md"
 
 const data = [
   {
     id: "AZ-900",
     detail: AZ900,
+  },
+  {
+    id: "Industrial-Engineer-Information-Processing",
+    detail: IndustrialEngineerInformationProcessing,
   },
   {
     id: "SQLD",
