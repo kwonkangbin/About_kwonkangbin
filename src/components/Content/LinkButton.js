@@ -24,6 +24,7 @@ export default function LinkButton({
 }
 
 const Container = styled(Link)`
+  font-size: 1rem;
   width: fit-content;
   display: flex;
   align-items: center;

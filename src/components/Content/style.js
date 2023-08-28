@@ -46,4 +46,9 @@ export const FadeIn = styled.section`
         margin: 10px 0 0 25px;
         color: gray;
     }
+
+    >div{
+        display: flex;
+        gap: 0px 4px;
+    }
 `;
